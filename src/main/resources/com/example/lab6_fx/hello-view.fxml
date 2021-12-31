@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab6_fx.HelloController">
+   <children>
+      <TableView fx:id="Group_table" layoutX="10.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="GroupName" prefWidth="75.0" text="GroupName" />
+          <TableColumn fx:id="NoStudents" prefWidth="75.0" text="NoStudents" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Student_table" layoutX="210.0" prefHeight="209.0" prefWidth="518.0">
+        <columns>
+            <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="LastName" prefWidth="75.0" text="LastName" />
+            <TableColumn fx:id="NumberOfCredits" prefWidth="113.0" text="NumberOfCredits" />
+            <TableColumn fx:id="Status" prefWidth="71.0" text="Status" />
+            <TableColumn fx:id="Year" prefWidth="72.0" text="Year" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="changeStatus" layoutX="444.0" layoutY="225.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
