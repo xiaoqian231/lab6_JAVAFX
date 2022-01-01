@@ -33,10 +33,10 @@ public class Group {
         StudentsList.add(Student);
     }
 
-    // b addPoints(Student, double) - add points to specified student
-    public void addPoints(Student Student, double Points) {
-        Student.setNumberOfCredits(Points + Student.getNumberOfCredits());
-    }
+//    // b addPoints(Student, double) - add points to specified student
+//    public void addPoints(Student Student, double Points) {
+//        Student.setNumberOfCredits(Points + Student.getNumberOfCredits());
+//    }
 
     //c deletStudent(Student) - decreasing the number of students by one (deleting a student completely if his points equal to 0.)
     public void decreasingStudent(Student Student) {
@@ -45,15 +45,15 @@ public class Group {
         }
     }
 
-    // d changeCondition(Student, StudentCondition) - changing the condition of a student
-    public void changeCondition(Student Student, StudentCondition StudentCondition) {
-        Student.setStatus(StudentCondition);
-    }
-
-    // e  removePoints(Student, double) - removing the given number of points from the student.
-    public void removePoints(Student Student, double point) {
-        Student.setNumberOfCredits(Student.getNumberOfCredits() - point);
-    }
+//    // d changeCondition(Student, StudentCondition) - changing the condition of a student
+//    public void changeCondition(Student Student, StudentCondition StudentCondition) {
+//        Student.setStatus(StudentCondition);
+//    }
+//
+//    // e  removePoints(Student, double) - removing the given number of points from the student.
+//    public void removePoints(Student Student, double point) {
+//        Student.setNumberOfCredits(Student.getNumberOfCredits() - point);
+//    }
 
     // f search(String) - Taking the student's name and returning it. Use Comparator
     //str1.equals(str2);

@@ -13,6 +13,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.util.converter.DoubleStringConverter;
+import javafx.util.converter.IntegerStringConverter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,7 +23,6 @@ import java.util.ResourceBundle;
 public class HelloController implements Initializable {
     private ObservableList<Group>group;
     private ObservableList<Student> student;
-
     ClassContainer classContainer=new ClassContainer();
 
 
@@ -39,28 +41,28 @@ public class HelloController implements Initializable {
     @FXML
     private TableColumn<Group, String> GroupName;
     @FXML
-    private TableColumn<Group, String> NoStudents;
+    private TableColumn<Group, Integer> NoStudents;
     //student
     @FXML
-    private TableColumn<Student, String> ID;
+    private TableColumn<Student, Integer> ID;
     @FXML
     private TableColumn<Student, String> LastName;
     @FXML
     private TableColumn<Student, String> Name;
     @FXML
-    private TableColumn<Student, String> NumberOfCredits;
+    private TableColumn<Student, Double> NumberOfCredits;
     @FXML
     private TableColumn<Student, StudentCondition> Status;
     @FXML
-    private TableColumn<Student, String> Year;
+    private TableColumn<Student, Integer> YearOfBirth;
     @FXML
     private ComboBox<?> changeStatus;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         group= FXCollections.observableArrayList();
         student=FXCollections.observableArrayList();
+        Student_table.setEditable(true);
         initTables();
         loadTableData();
         events();
@@ -68,14 +70,20 @@ public class HelloController implements Initializable {
     private void initTables(){
         //group
         GroupName.setCellValueFactory(new PropertyValueFactory<>("GroupName"));
-     //NoStudents.setCellValueFactory(new PropertyValueFactory<>("NoStudents"));
+      //NoStudents.setCellValueFactory(new PropertyValueFactory<>("NoStudents"));
         //students
-       //ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
+        ID.setCellValueFactory(new PropertyValueFactory<Student, Integer>("ID"));
+        ID.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         Name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        Name.setCellFactory(TextFieldTableCell.forTableColumn());
         LastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
-        //NumberOfCredits.setCellValueFactory(new PropertyValueFactory<>("Points"));
+        LastName.setCellFactory(TextFieldTableCell.forTableColumn());
+        NumberOfCredits.setCellValueFactory(new PropertyValueFactory<Student, Double>("NumberOfCredits"));
+        NumberOfCredits.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
-        //Year.setCellValueFactory(new PropertyValueFactory<>("Year"));
+        //Status.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+        YearOfBirth.setCellValueFactory(new PropertyValueFactory<Student, Integer>("YearOfBirth"));
+        YearOfBirth.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
     }
     private void loadTableData(){
 

@@ -83,13 +83,15 @@ public class ClassContainer {
     }
 
     private void infill() {
-        Student stu1 = new Student("Marta", "Green", StudentCondition.Sick, 1996, 5);
-        Student stu2 = new Student("Lily", "Jobs", StudentCondition.Absent, 1996, 4.5);
-        Student stu3 = new Student("Lucy", "Jobs", StudentCondition.Present, 1994, 3);
-        Student stu4 = new Student("Max", "Bush", StudentCondition.Present, 1995, 4);
-        Student stu5 = new Student("Jone", "Bush", StudentCondition.Present, 1995, 4.5);
-        Student stu6 = new Student("Marta", "aba", StudentCondition.Present, 1996, 4.5);
-
+        Student stu1 = new Student(1,"Marta", "Green", StudentCondition.Sick, 1996, 5.0);
+        Student stu2 = new Student(2,"Lily", "Jobs", StudentCondition.Absent, 1996, 4.5);
+        Student stu3 = new Student(3,"Lucy", "Jobs", StudentCondition.Present, 1994, 3.0);
+        Student stu4 = new Student(4,"Max", "Bush", StudentCondition.Present, 1995, 4.0);
+        Student stu5 = new Student(5,"Jone", "Bush", StudentCondition.Present, 1995, 4.5);
+        Student stu6 = new Student(6,"Marta", "aba", StudentCondition.Present, 1996, 4.5);
+        Student stu7 = new Student(7,"Marcin", "Bush", StudentCondition.Present, 1995, 4.0);
+        Student stu8 = new Student(8,"Jack", "Bush", StudentCondition.Present, 1995, 4.5);
+        Student stu9 = new Student(9,"Mary", "aba", StudentCondition.Present, 1996, 4.5);
         addClass("class1", 10);
         addClass("class2", 20);
         addClass("class3", 30);
@@ -102,7 +104,10 @@ public class ClassContainer {
 
         getClassByName("class2").addStudent(stu5);
         getClassByName("class2").addStudent(stu6);
+        getClassByName("class2").addStudent(stu7);
 
+        getClassByName("class3").addStudent(stu8);
+        getClassByName("class4").addStudent(stu9);
 
 
     }

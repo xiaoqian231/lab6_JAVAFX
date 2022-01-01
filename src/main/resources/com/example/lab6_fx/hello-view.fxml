@@ -15,12 +15,12 @@
       </TableView>
       <TableView fx:id="Student_table" layoutX="210.0" prefHeight="209.0" prefWidth="518.0">
         <columns>
-            <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
-          <TableColumn fx:id="LastName" prefWidth="75.0" text="LastName" />
-            <TableColumn fx:id="NumberOfCredits" prefWidth="113.0" text="NumberOfCredits" />
-            <TableColumn fx:id="Status" prefWidth="71.0" text="Status" />
-            <TableColumn fx:id="Year" prefWidth="72.0" text="Year" />
+            <TableColumn fx:id="ID" prefWidth="53.0" text="ID" />
+          <TableColumn fx:id="Name" prefWidth="66.0" text="Name" />
+          <TableColumn fx:id="LastName" prefWidth="66.0" text="LastName" />
+            <TableColumn fx:id="NumberOfCredits" prefWidth="111.0" text="NumberOfCredits" />
+            <TableColumn fx:id="Status" prefWidth="81.0" text="Status" />
+            <TableColumn fx:id="YearOfBirth" prefWidth="110.0" text="YearOfBirth" />
         </columns>
       </TableView>
       <ComboBox fx:id="changeStatus" layoutX="444.0" layoutY="225.0" prefWidth="150.0" />
